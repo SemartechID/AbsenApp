@@ -17,7 +17,7 @@ class CreateAttendanceListsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('attendance_id');
             $table->unsignedBigInteger('user_id');
-            $table->enum('isPresent', ['1', '2'])->default('1');
+            $table->enum('isPresent', ['in', 'present'])->default('present');
             $table->string('lat');
             $table->string('long');
             $table->timestamps();

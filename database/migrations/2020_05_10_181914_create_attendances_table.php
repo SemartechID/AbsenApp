@@ -17,7 +17,7 @@ class CreateAttendancesTable extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('organization_id');
-            $table->enum('attendance_type', ['in', 'in-out']);
+            $table->enum('attendance_type', ['in', 'in-out'])->default('in');
             $table->dateTime('dateTimeIn');
             $table->dateTime('dateTimeOut')->nullable();
             $table->enum('location_type', ['lock', 'unlock']);
